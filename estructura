@@ -1,0 +1,6 @@
+azure-facturacion-chat/
+ ├── function-billing/
+ │     ├── index.js
+ │     ├── function.json
+ │     └── package.json
+ └── README.md
