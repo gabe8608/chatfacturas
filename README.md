@@ -46,17 +46,25 @@ Publicar con Azure Functions Core Tools:
 
 EN POWER SHELL
 
-func azure functionapp publish <NOMBRE-DE-TU-FUNCTION-APP>
+bash
 
+func azure functionapp publish <NOMBRE-DE-TU-FUNCTION-APP>
 
 A NIVEL DE SEGURIDAD
 
 EN POWER SHELL
 
+bash
+
 curl -X GET "http://localhost:7071/api/facturacion"
 
 
+
+
 ARCHIVO JSON 
+
+
+
 
 {
   "mensaje": "Consulta de facturación realizada con éxito",
