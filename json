@@ -1,0 +1,13 @@
+{
+  "name": "function-billing",
+  "version": "1.0.0",
+  "description": "Azure Function para consultar facturación",
+  "main": "index.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.5.0",
+    "@azure/arm-costmanagement": "^1.2.0"
+  }
+}
