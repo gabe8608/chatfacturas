@@ -22,10 +22,12 @@ Una cuenta de Azure Storage (requerida por Functions).
 INSTALACION LOCAL
 
 # Clonar el repositorio
+
 git clone https://github.com/tuusuario/azure-facturacion-chat.git
 cd azure-facturacion-chat/function-billing
 
 # Instalar dependencias
+
 npm install
 
 EJECUTAR LOCALMENTE
@@ -43,15 +45,19 @@ Configurar Application Settings (ejemplo: credenciales de Managed Identity).
 Publicar con Azure Functions Core Tools:
 
 EN POWER SHELL
+
 func azure functionapp publish <NOMBRE-DE-TU-FUNCTION-APP>
 
 
 A NIVEL DE SEGURIDAD
+
 EN POWER SHELL
+
 curl -X GET "http://localhost:7071/api/facturacion"
 
 
 ARCHIVO JSON 
+
 {
   "mensaje": "Consulta de facturación realizada con éxito",
   "costo": "120.50 USD",
