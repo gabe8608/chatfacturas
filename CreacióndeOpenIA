@@ -1,0 +1,13 @@
+{
+    "id": "/subscriptions/8bcad3d0-d4fe-4540-97e8-83668605fe2f/resourceGroups/FacturasAPI",
+    "name": "FacturasAPI",
+    "type": "Microsoft.Resources/resourceGroups",
+    "location": "brazilsouth",
+    "tags": {
+        "Jefe de proyecto": "Gerardo Baratto"
+    },
+    "properties": {
+        "provisioningState": "Succeeded"
+    },
+    "apiVersion": "2020-06-01"
+}
