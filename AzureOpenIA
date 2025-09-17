@@ -1,0 +1,303 @@
+{
+    "id": "/subscriptions/8bcad3d0-d4fe-4540-97e8-83668605fe2f/resourceGroups/FacturasIA/providers/Microsoft.CognitiveServices/accounts/FacturasAPI",
+    "name": "FacturasAPI",
+    "type": "Microsoft.CognitiveServices/accounts",
+    "etag": "\"50003f6e-0000-0100-0000-68c9c3e40000\"",
+    "location": "eastus",
+    "sku": {
+        "name": "S0"
+    },
+    "kind": "OpenAI",
+    "tags": {
+        "Jefe de proyecto": "Gerardo Baratto"
+    },
+    "properties": {
+        "endpoint": "https://facturasapi.openai.azure.com/",
+        "internalId": "171bac811afd47b292faedf3a0161913",
+        "dateCreated": "2025-09-16T19:56:50.9168964Z",
+        "apiProperties": {},
+        "callRateLimit": {
+            "rules": [
+                {
+                    "key": "openai.dalle.post",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "dalle/*",
+                            "method": "POST"
+                        },
+                        {
+                            "path": "openai/images/*",
+                            "method": "POST"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.dalle.other",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "dalle/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/operations/images/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.assistants.list",
+                    "renewalPeriod": 60,
+                    "count": 120,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/assistants",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.threads.list",
+                    "renewalPeriod": 60,
+                    "count": 120,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/threads",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.vectorstores.list",
+                    "renewalPeriod": 60,
+                    "count": 120,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/vector_stores",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.vectorstores.post",
+                    "renewalPeriod": 1,
+                    "count": 60,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/vector_stores",
+                            "method": "POST"
+                        },
+                        {
+                            "path": "openai/vector_stores/*",
+                            "method": "POST"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.assistants.default",
+                    "renewalPeriod": 1,
+                    "count": 100000,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/assistants",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/assistants/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/threads",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/threads/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/vector_stores",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/vector_stores/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.responses.default",
+                    "renewalPeriod": 1,
+                    "count": 100000,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/responses",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/responses/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.post",
+                    "renewalPeriod": 60,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/v1/batches",
+                            "method": "POST"
+                        },
+                        {
+                            "path": "openai/batches",
+                            "method": "POST"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.get",
+                    "renewalPeriod": 60,
+                    "count": 500,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/v1/batches/*",
+                            "method": "GET"
+                        },
+                        {
+                            "path": "openai/batches/*",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.list",
+                    "renewalPeriod": 60,
+                    "count": 100,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/v1/batches",
+                            "method": "GET"
+                        },
+                        {
+                            "path": "openai/batches",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "default",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "*",
+                            "method": "*"
+                        }
+                    ]
+                }
+            ]
+        },
+        "isMigrated": false,
+        "customSubDomainName": "facturasapi",
+        "networkAcls": {
+            "defaultAction": "Allow",
+            "virtualNetworkRules": [],
+            "ipRules": []
+        },
+        "privateEndpointConnections": [],
+        "publicNetworkAccess": "Enabled",
+        "capabilities": [
+            {
+                "name": "VirtualNetworks"
+            },
+            {
+                "name": "CustomerManagedKey"
+            },
+            {
+                "name": "EnableRLSForThrottling",
+                "value": "false"
+            },
+            {
+                "name": "MaxFineTuneCount",
+                "value": "500"
+            },
+            {
+                "name": "MaxRunningFineTuneCount",
+                "value": "3"
+            },
+            {
+                "name": "MaxUserFileCount",
+                "value": "100"
+            },
+            {
+                "name": "MaxTrainingFileSize",
+                "value": "512000000"
+            },
+            {
+                "name": "MaxUserFileImportDurationInHours",
+                "value": "1"
+            },
+            {
+                "name": "MaxFineTuneJobDurationInHours",
+                "value": "720"
+            },
+            {
+                "name": "MaxEvaluationRunDurationInHours",
+                "value": "5"
+            },
+            {
+                "name": "MaxRunningEvaluationCount",
+                "value": "5"
+            },
+            {
+                "name": "MaxRunningGlobalStandardFineTuneCount",
+                "value": "3"
+            },
+            {
+                "name": "TrustedServices",
+                "value": "Microsoft.CognitiveServices,Microsoft.MachineLearningServices,Microsoft.Search,Microsoft.VideoIndexer"
+            },
+            {
+                "name": "RaiMonitor"
+            },
+            {
+                "name": "quotaRefundsEnabled",
+                "value": "false"
+            }
+        ],
+        "endpoints": {
+            "OpenAI Language Model Instance API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Dall-E API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Sora API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Moderations API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Whisper API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Model Scaleset API": "https://facturasapi.openai.azure.com/",
+            "OpenAI Realtime API": "https://facturasapi.openai.azure.com/",
+            "Token Service API": "https://facturasapi.openai.azure.com/"
+        },
+        "provisioningState": "Succeeded"
+    },
+    "systemData": {
+        "createdBy": "gabe1986san@outlook.com",
+        "createdByType": "User",
+        "createdAt": "2025-09-16T19:56:49.7793771Z",
+        "lastModifiedBy": "gabe1986san@outlook.com",
+        "lastModifiedByType": "User",
+        "lastModifiedAt": "2025-09-16T19:56:49.7793771Z"
+    },
+    "apiVersion": "2021-04-30"
+}
